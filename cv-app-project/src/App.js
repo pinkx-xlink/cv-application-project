@@ -35,7 +35,7 @@ function App() {
           />
         </label>
 
-        <div>
+        <div id="cv-form">
           <h2>{fullName}</h2>
         </div>
       </header>
