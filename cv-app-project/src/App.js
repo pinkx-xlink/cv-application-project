@@ -6,6 +6,8 @@ function App() {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [schoolName, setSchoolName] = useState('');
+
 
   const fullName = firstName + ' ' + lastName;
   function handleFirstNameChange(e) {
@@ -22,6 +24,10 @@ function App() {
 
   function handlePhoneNumberChange(e) {
     setPhoneNumber(e.target.value);
+  }
+
+  function handleSchoolNameChange(e) {
+    setSchoolName(e.target.value);
   }
 
   return (
@@ -61,10 +67,24 @@ function App() {
           </label>
         </div>
 
+        <div class="education-exp">
+          <h3>Educational Experience</h3>
+          <label>
+            School name: {' '}
+            <input 
+              value={schoolName}
+              onChange={handleSchoolNameChange}
+            />
+          </label>
+        </div>
+
+
         <div id="cv-form">
           <h2>{fullName}</h2>
           <span>{phoneNumber} {email} </span>
 
+          <h3>Educational Experience</h3>
+          <p><b>{schoolName}</b></p>
         </div>
       </header>
     </div>
