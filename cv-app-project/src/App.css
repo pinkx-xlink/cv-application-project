@@ -21,7 +21,8 @@
 .App-link {
   color: #61dafb;
 }
-.general-info {
+.general-info,
+.education-exp {
   display: flex;
   flex-direction: column;
   border: 1px solid white;

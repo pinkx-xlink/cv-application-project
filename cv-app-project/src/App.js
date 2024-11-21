@@ -7,7 +7,7 @@ function App() {
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [schoolName, setSchoolName] = useState('');
-
+  const [fieldOfStudy, setFieldOfStudy] = useState('');
 
   const fullName = firstName + ' ' + lastName;
   function handleFirstNameChange(e) {
@@ -28,6 +28,10 @@ function App() {
 
   function handleSchoolNameChange(e) {
     setSchoolName(e.target.value);
+  }
+
+  function handleFieldOfStudyChange(e) {
+    setFieldOfStudy(e.target.value);
   }
 
   return (
@@ -74,6 +78,13 @@ function App() {
             <input 
               value={schoolName}
               onChange={handleSchoolNameChange}
+            />
+          </label>
+          <label>
+            Field of study: {' '}
+            <input 
+              value={fieldOfStudy}
+              onChange={handleFieldOfStudyChange}
             />
           </label>
         </div>
