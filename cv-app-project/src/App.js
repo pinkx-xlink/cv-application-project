@@ -4,6 +4,7 @@ import { useState } from 'react';
 function App() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
 
   const fullName = firstName + ' ' + lastName;
   function handleFirstNameChange(e) {
@@ -12,6 +13,10 @@ function App() {
 
   function handleLastNameChange(e) {
     setLastName(e.target.value);
+  }
+
+  function handleEmailChange(e) {
+    setEmail(e.target.value);
   }
 
   return (
@@ -34,9 +39,17 @@ function App() {
             onChange={handleLastNameChange}
           />
         </label>
+        <label>
+          Email: {' '}
+          <input 
+            value={email}
+            onChange={handleEmailChange}
+          />
+        </label>
 
         <div id="cv-form">
           <h2>{fullName}</h2>
+          <p>{email}</p>
         </div>
       </header>
     </div>
