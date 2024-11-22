@@ -24,6 +24,7 @@
 .general-info,
 .education-exp,
 .practical-exp {
+  width: 350px;
   display: flex;
   flex-direction: column;
   border: 1px solid white;
