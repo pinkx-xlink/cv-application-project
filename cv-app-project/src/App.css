@@ -22,7 +22,8 @@
   color: #61dafb;
 }
 .general-info,
-.education-exp {
+.education-exp,
+.practical-exp {
   display: flex;
   flex-direction: column;
   border: 1px solid white;
