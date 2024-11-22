@@ -8,7 +8,8 @@ function App() {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [schoolName, setSchoolName] = useState('');
   const [fieldOfStudy, setFieldOfStudy] = useState('');
-
+  const [yearsOfStudy, setYearsOfStudy] = useState('');
+  const [companyName, setCompanyName] = useState('');
   const fullName = firstName + ' ' + lastName;
   function handleFirstNameChange(e) {
     setFirstName(e.target.value);
@@ -32,6 +33,14 @@ function App() {
 
   function handleFieldOfStudyChange(e) {
     setFieldOfStudy(e.target.value);
+  }
+
+  function handleYearsOfStudyChange(e) {
+    setYearsOfStudy(e.target.value);
+  }
+
+  function handleCompanyNameChange(e) {
+    setCompanyName(e.target.value);
   }
 
   return (
@@ -87,6 +96,24 @@ function App() {
               onChange={handleFieldOfStudyChange}
             />
           </label>
+          <label>
+            Years of study: {' '}
+            <input 
+              value={yearsOfStudy}
+              onChange={handleYearsOfStudyChange}
+            />
+          </label>
+        </div>
+
+        <div class="practical-exp">
+          <h3>Practical Experience</h3>
+          <label>
+            Company name: {' '}
+            <input
+              value={companyName}
+              onChange={handleCompanyNameChange}
+            />
+          </label>
         </div>
 
 
@@ -96,6 +123,9 @@ function App() {
 
           <h3>Educational Experience</h3>
           <p><b>{schoolName}</b></p>
+          <p>{fieldOfStudy}</p>
+          <h3>Practical Experience</h3>
+          <p>{companyName}</p>
         </div>
       </header>
     </div>
