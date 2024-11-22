@@ -10,6 +10,9 @@ function App() {
   const [fieldOfStudy, setFieldOfStudy] = useState('');
   const [yearsOfStudy, setYearsOfStudy] = useState('');
   const [companyName, setCompanyName] = useState('');
+  const [positionTitle, setPositionTitle] = useState('');
+  const [responsibilities, setResponsibilities] = useState('');
+
   const fullName = firstName + ' ' + lastName;
   function handleFirstNameChange(e) {
     setFirstName(e.target.value);
@@ -43,6 +46,13 @@ function App() {
     setCompanyName(e.target.value);
   }
 
+  function handlePositionTitleChange(e) {
+    setPositionTitle(e.target.value);
+  }
+
+  function handleResponsibilitiesChange(e) {
+    setResponsibilities(e.target.value);
+  }
   return (
     <div className="App">
       <header className="App-header">
@@ -114,6 +124,20 @@ function App() {
               onChange={handleCompanyNameChange}
             />
           </label>
+          <label>
+            Position title: {' '}
+            <input 
+              value={positionTitle}
+              onChange={handlePositionTitleChange}
+            />
+          </label>
+          <label>
+            Responsibilities: {' '}
+            <textarea
+              value={responsibilities}
+              onChange={handleResponsibilitiesChange}
+            />
+          </label>
         </div>
 
 
@@ -124,8 +148,12 @@ function App() {
           <h3>Educational Experience</h3>
           <p><b>{schoolName}</b></p>
           <p>{fieldOfStudy}</p>
+          <p>{yearsOfStudy}</p>
           <h3>Practical Experience</h3>
           <p>{companyName}</p>
+          <p>{positionTitle}</p>
+          <p>Responsibilities:</p>
+          <li>{responsibilities}</li>
         </div>
       </header>
     </div>
