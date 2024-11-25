@@ -71,9 +71,8 @@ function App() {
       <div class="user-input">
           <div class="general-info"> 
             <h3>General Info</h3>
-      
-            
-            <button onClick={handleEditClick}> {edit ? 'Hide' : 'Show'} submit</button>
+            {/* expand or collapse the "General Info" section on button click using a useState */}
+            <button onClick={handleEditClick}> {edit ? 'Submit' : 'Edit'} </button>
             {edit && 
             <>
               <label>
@@ -109,54 +108,62 @@ function App() {
 
           <div class="education-exp">
             <h3>Educational Experience</h3>
-            <label>
-              School name: {' '}
-              <input 
-                value={schoolName}
-                onChange={handleSchoolNameChange}
-              />
-            </label>
-            <label>
-              Field of study: {' '}
-              <input 
-                value={fieldOfStudy}
-                onChange={handleFieldOfStudyChange}
-              />
-            </label>
-            <label>
-              Years of study: {' '}
-              <input 
-                value={yearsOfStudy}
-                onChange={handleYearsOfStudyChange}
-              />
-            </label>
-            <button>submit</button>
+            <button onClick={handleEditClick}> {edit ? 'Submit' : 'Edit'} </button>
+            {edit && 
+              <>
+              <label>
+                School name: {' '}
+                <input 
+                  value={schoolName}
+                  onChange={handleSchoolNameChange}
+                />
+              </label>
+              <label>
+                Field of study: {' '}
+                <input 
+                  value={fieldOfStudy}
+                  onChange={handleFieldOfStudyChange}
+                />
+              </label>
+              <label>
+                Years of study: {' '}
+                <input 
+                  value={yearsOfStudy}
+                  onChange={handleYearsOfStudyChange}
+                />
+              </label>
+              <button>submit</button>
+            </>}
           </div>
 
           <div class="practical-exp">
             <h3>Practical Experience</h3>
-            <label>
-              Company name: {' '}
-              <input
-                value={companyName}
-                onChange={handleCompanyNameChange}
-              />
-            </label>
-            <label>
-              Position title: {' '}
-              <input 
-                value={positionTitle}
-                onChange={handlePositionTitleChange}
-              />
-            </label>
-            <label>
-              Responsibilities: {' '}
-              <textarea
-                value={responsibilities}
-                onChange={handleResponsibilitiesChange}
-              />
-            </label>
-            <button>submit</button>
+            <button onClick={handleEditClick}> {edit ? 'Submit' : 'Edit'} </button>
+            {edit && 
+              <>
+              <label>
+                Company name: {' '}
+                <input
+                  value={companyName}
+                  onChange={handleCompanyNameChange}
+                />
+              </label>
+              <label>
+                Position title: {' '}
+                <input 
+                  value={positionTitle}
+                  onChange={handlePositionTitleChange}
+                />
+              </label>
+              <label>
+                Responsibilities: {' '}
+                <textarea
+                  value={responsibilities}
+                  onChange={handleResponsibilitiesChange}
+                />
+              </label>
+              <button>submit</button>
+            </>}
           </div>
         </div>
 
