@@ -140,7 +140,6 @@ function App() {
                   onChange={handleYearsOfStudyChange}
                 />
               </label>
-              <button>submit</button>
             </>}
           </div>
 
@@ -170,7 +169,6 @@ function App() {
                   onChange={handleResponsibilitiesChange}
                 />
               </label>
-              <button>submit</button>
             </>}
           </div>
         </div>
