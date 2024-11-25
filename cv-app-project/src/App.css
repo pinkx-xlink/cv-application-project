@@ -35,6 +35,7 @@
   display: flex;
   flex-direction: row;
   justify-items: center;
+
 }
 #cv-form {
   border: 1px solid white;

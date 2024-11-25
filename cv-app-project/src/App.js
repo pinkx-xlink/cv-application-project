@@ -2,6 +2,9 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
+  const [index, setIndex] = useState(0);
+  const [edit, setEdit] = useState(false);
+
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -14,6 +17,11 @@ function App() {
   const [responsibilities, setResponsibilities] = useState('');
 
   const fullName = firstName + ' ' + lastName;
+
+  function handleEditClick() {
+    setEdit(!edit);
+  }
+
   function handleFirstNameChange(e) {
     setFirstName(e.target.value);
   }
@@ -59,11 +67,16 @@ function App() {
         <h1>CV Creator Project</h1>
         <p>Enter your info and we'll take care of the rest!</p>
       </header>
-      
+
       <div class="user-input">
           <div class="general-info"> 
             <h3>General Info</h3>
-            <label>
+      
+            
+            <button onClick={handleEditClick}> {edit ? 'Hide' : 'Show'} submit</button>
+            {edit && 
+            <>
+              <label>
               First name: {' '}
               <input 
                 value={firstName}
@@ -91,6 +104,7 @@ function App() {
                 onChange={handlePhoneNumberChange}
               />
             </label>
+          </>}
           </div>
 
           <div class="education-exp">
@@ -116,6 +130,7 @@ function App() {
                 onChange={handleYearsOfStudyChange}
               />
             </label>
+            <button>submit</button>
           </div>
 
           <div class="practical-exp">
@@ -141,6 +156,7 @@ function App() {
                 onChange={handleResponsibilitiesChange}
               />
             </label>
+            <button>submit</button>
           </div>
         </div>
 
