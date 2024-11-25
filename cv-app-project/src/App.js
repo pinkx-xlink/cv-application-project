@@ -2,8 +2,10 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
-  const [index, setIndex] = useState(0);
-  const [edit, setEdit] = useState(false);
+ // const [index, setIndex] = useState(0);
+  const [editGeneralInfo, setEditGeneralInfo] = useState(false);
+  const [editEducation, setEditEducation] = useState(false);
+  const [editExperience, setEditExperience] = useState(false);
 
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -18,8 +20,14 @@ function App() {
 
   const fullName = firstName + ' ' + lastName;
 
-  function handleEditClick() {
-    setEdit(!edit);
+  function handleEditGeneralInfoClick() {
+    setEditGeneralInfo(!editGeneralInfo);
+  }
+  function handleEditEducationClick() {
+    setEditEducation(!editEducation);
+  }
+  function handleEditExperienceClick() {
+    setEditExperience(!editExperience);
   }
 
   function handleFirstNameChange(e) {
@@ -72,8 +80,8 @@ function App() {
           <div class="general-info"> 
             <h3>General Info</h3>
             {/* expand or collapse the "General Info" section on button click using a useState */}
-            <button onClick={handleEditClick}> {edit ? 'Submit' : 'Edit'} </button>
-            {edit && 
+            <button onClick={handleEditGeneralInfoClick}> {editGeneralInfo ? 'Submit' : 'Edit'} </button>
+            {editGeneralInfo && 
             <>
               <label>
               First name: {' '}
@@ -108,8 +116,8 @@ function App() {
 
           <div class="education-exp">
             <h3>Educational Experience</h3>
-            <button onClick={handleEditClick}> {edit ? 'Submit' : 'Edit'} </button>
-            {edit && 
+            <button onClick={handleEditEducationClick}> {editEducation ? 'Submit' : 'Edit'} </button>
+            {editEducation && 
               <>
               <label>
                 School name: {' '}
@@ -138,8 +146,8 @@ function App() {
 
           <div class="practical-exp">
             <h3>Practical Experience</h3>
-            <button onClick={handleEditClick}> {edit ? 'Submit' : 'Edit'} </button>
-            {edit && 
+            <button onClick={handleEditExperienceClick}> {editExperience ? 'Submit' : 'Edit'} </button>
+            {editExperience && 
               <>
               <label>
                 Company name: {' '}
