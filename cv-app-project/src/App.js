@@ -58,88 +58,91 @@ function App() {
       <header className="App-header">
         <h1>CV Creator Project</h1>
         <p>Enter your info and we'll take care of the rest!</p>
-        <div class="general-info"> 
-          <h3>General Info</h3>
-          <label>
-            First name: {' '}
-            <input 
-              value={firstName}
-              onChange={handleFirstNameChange}
-            />
-          </label>
-          <label>
-            Last name: {' '}
-            <input 
-              value={lastName}
-              onChange={handleLastNameChange}
-            />
-          </label>
-          <label>
-            Email: {' '}
-            <input 
-              value={email}
-              onChange={handleEmailChange}
-            />
-          </label>
-          <label>
-            Phone number: {' '}
-            <input
-              value={phoneNumber}
-              onChange={handlePhoneNumberChange}
-            />
-          </label>
-        </div>
+      </header>
+      
+      <div class="user-input">
+          <div class="general-info"> 
+            <h3>General Info</h3>
+            <label>
+              First name: {' '}
+              <input 
+                value={firstName}
+                onChange={handleFirstNameChange}
+              />
+            </label>
+            <label>
+              Last name: {' '}
+              <input 
+                value={lastName}
+                onChange={handleLastNameChange}
+              />
+            </label>
+            <label>
+              Email: {' '}
+              <input 
+                value={email}
+                onChange={handleEmailChange}
+              />
+            </label>
+            <label>
+              Phone number: {' '}
+              <input
+                value={phoneNumber}
+                onChange={handlePhoneNumberChange}
+              />
+            </label>
+          </div>
 
-        <div class="education-exp">
-          <h3>Educational Experience</h3>
-          <label>
-            School name: {' '}
-            <input 
-              value={schoolName}
-              onChange={handleSchoolNameChange}
-            />
-          </label>
-          <label>
-            Field of study: {' '}
-            <input 
-              value={fieldOfStudy}
-              onChange={handleFieldOfStudyChange}
-            />
-          </label>
-          <label>
-            Years of study: {' '}
-            <input 
-              value={yearsOfStudy}
-              onChange={handleYearsOfStudyChange}
-            />
-          </label>
-        </div>
+          <div class="education-exp">
+            <h3>Educational Experience</h3>
+            <label>
+              School name: {' '}
+              <input 
+                value={schoolName}
+                onChange={handleSchoolNameChange}
+              />
+            </label>
+            <label>
+              Field of study: {' '}
+              <input 
+                value={fieldOfStudy}
+                onChange={handleFieldOfStudyChange}
+              />
+            </label>
+            <label>
+              Years of study: {' '}
+              <input 
+                value={yearsOfStudy}
+                onChange={handleYearsOfStudyChange}
+              />
+            </label>
+          </div>
 
-        <div class="practical-exp">
-          <h3>Practical Experience</h3>
-          <label>
-            Company name: {' '}
-            <input
-              value={companyName}
-              onChange={handleCompanyNameChange}
-            />
-          </label>
-          <label>
-            Position title: {' '}
-            <input 
-              value={positionTitle}
-              onChange={handlePositionTitleChange}
-            />
-          </label>
-          <label>
-            Responsibilities: {' '}
-            <textarea
-              value={responsibilities}
-              onChange={handleResponsibilitiesChange}
-            />
-          </label>
+          <div class="practical-exp">
+            <h3>Practical Experience</h3>
+            <label>
+              Company name: {' '}
+              <input
+                value={companyName}
+                onChange={handleCompanyNameChange}
+              />
+            </label>
+            <label>
+              Position title: {' '}
+              <input 
+                value={positionTitle}
+                onChange={handlePositionTitleChange}
+              />
+            </label>
+            <label>
+              Responsibilities: {' '}
+              <textarea
+                value={responsibilities}
+                onChange={handleResponsibilitiesChange}
+              />
+            </label>
+          </div>
         </div>
-
 
         <div id="cv-form">
           <h2>{fullName}</h2>
@@ -155,7 +158,6 @@ function App() {
           <p>Responsibilities:</p>
           <li>{responsibilities}</li>
         </div>
-      </header>
     </div>
   );
 }

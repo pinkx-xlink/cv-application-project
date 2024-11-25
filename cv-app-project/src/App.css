@@ -9,7 +9,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,7 +31,11 @@
   align-items: self-end;
   padding: 15px;
 } 
-
+.user-input {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+}
 #cv-form {
   border: 1px solid white;
   width: 600px;
