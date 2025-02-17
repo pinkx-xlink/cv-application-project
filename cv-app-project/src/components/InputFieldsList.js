@@ -1,6 +1,6 @@
-import "../styles/InputList.css"
+import "../styles/InputFieldsList.css"
 
-export default function InputList({inputFields, selectedId, dispatch}) {
+export default function InputFieldsList({inputFields, selectedId, dispatch}) {
     return (
         <section className='input-fields-list'>
         <ul>

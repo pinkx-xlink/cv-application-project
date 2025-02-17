@@ -1,7 +1,7 @@
 import './App.css';
 import { useState, useReducer } from 'react';
 import Text from './components/Text';
-import InputList from './components/InputList';
+import InputFieldsList from './components/InputFieldsList';
 import infoReducer, { initialState } from './components/infoReducer';
 
 // function reducer(state = "", action) {
@@ -129,7 +129,7 @@ function App() {
       </header>
 
       <div>
-        <InputList
+        <InputFieldsList
           inputFields={inputFields}
           selectedId={state.selectedId}
           dispatch={dispatch}
