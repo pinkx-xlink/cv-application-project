@@ -13,6 +13,20 @@ function reducer(state = "", action) {
   }
 }
 
+const inputFields = [
+  {id: 0, name: 'General Info'},
+  {id: 1, name: 'Education'},
+  {id: 2, name: 'Experience'},
+  {id: 3, name: 'First Name'},
+  {id: 4, name: 'Last Name'},
+  {id: 5, name: 'Email'},
+  {id: 6, name: 'Phone Number'},
+  {id: 7, name: 'School Name'},
+  {id: 8, name: 'Field of Study'},
+  {id: 9, name: 'Years of Study'},
+  {id: 10, name: 'Company Name'},
+];
+
 function App() {
  // const [index, setIndex] = useState(0);
  const [state, dispatch] = useReducer(reducer, "");
