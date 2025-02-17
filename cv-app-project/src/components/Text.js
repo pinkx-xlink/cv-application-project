@@ -15,7 +15,10 @@ export default function Text({inputField, message, dispatch}) {
             />
             <button
                 onClick={() => {
-                    alert('done')
+                    alert('done');
+                    dispatch({
+                        type: 'ON_CHANGE',
+                    })
                 }}
             ></button>
         </section>

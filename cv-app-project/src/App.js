@@ -1,5 +1,6 @@
 import './App.css';
 import { useState, useReducer } from 'react';
+import Text from './components/Text';
 
 function reducer(state = "", action) {
   switch (action.type) {
@@ -135,6 +136,12 @@ function App() {
         />
         <div>{state}</div>
       </header>
+      {/* <Text
+        key={inputField.id}
+        message={message}
+        inputField={inputField}
+        dispatch={dispatch}
+      /> */}
 
       <section className='input-fields-list'>
         <ul>
