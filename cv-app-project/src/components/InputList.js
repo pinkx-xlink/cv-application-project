@@ -7,7 +7,7 @@ export default function InputList({inputFields, selectedId, dispatch}) {
               <button
                 onClick={() => {
                   dispatch({
-                    type: 'ON_CHANGE',
+                    type: 'CHANGED_SELECTION',
                     inputFieldId: inputField.id,
                   });
                 }}> 

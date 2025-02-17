@@ -8,7 +8,7 @@ export default function Text({inputField, message, dispatch}) {
                 placeholder={'Textarea for ' + inputField.name}
                 onChange={(e) => {
                     dispatch({
-                        type: "ON_CHANGE",
+                        type: 'EDITED_MESSAGE',
                         message: e.target.value,
                     });
                 }}
@@ -17,10 +17,11 @@ export default function Text({inputField, message, dispatch}) {
                 onClick={() => {
                     alert('done');
                     dispatch({
-                        type: 'ON_CHANGE',
+                        type: 'SENT_MESSAGE',
                     })
-                }}
-            ></button>
+                }}>
+                    Send to {inputField.name}
+                </button>
         </section>
     )
 }

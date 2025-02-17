@@ -2,7 +2,7 @@ import './App.css';
 import { useState, useReducer } from 'react';
 import Text from './components/Text';
 import InputList from './components/InputList';
-import infoReducer from './components/infoReducer';
+import infoReducer, { initialState } from './components/infoReducer';
 
 // function reducer(state = "", action) {
 //   switch (action.type) {
@@ -36,10 +36,15 @@ const inputFields = [
   {id: 11, name: 'Position Title'},
   {id: 12, name: 'Responsibilities'},
 ];
-console.log(inputFields)
+// console.log(inputFields)
 function App() {
  // const [index, setIndex] = useState(0);
  // const [state, dispatch] = useReducer(reducer, "");
+  const [state, dispatch] = useReducer(infoReducer, initialState);
+  const message = state.messages[state.selectedId];
+  const userInput = inputFields.find((i) => i.id === state.selectedId);
+
+
 
   const [editGeneralInfo, setEditGeneralInfo] = useState(false);
   const [editEducation, setEditEducation] = useState(false);
@@ -122,6 +127,21 @@ function App() {
         <div>{state}</div> */}
       
       </header>
+
+      <div>
+        <InputList
+          inputFields={inputFields}
+          selectedId={state.selectedId}
+          dispatch={dispatch}
+        />
+        <Text
+          key={inputFields.id}
+          message={message}
+          inputField={inputFields}
+          dispatch={dispatch}
+        />
+      </div>
+
       {/* <Text
         key={inputField.id}
         message={message}
