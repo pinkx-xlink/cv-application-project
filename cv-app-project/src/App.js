@@ -133,6 +133,7 @@ function App() {
           inputFields={inputFields}
           selectedId={state.selectedId}
           dispatch={dispatch}
+          className="input-fields-list"
         />
         <Text
           key={inputFields.id}
