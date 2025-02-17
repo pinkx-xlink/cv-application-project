@@ -31,6 +31,7 @@ export default function Text({inputField, message, dispatch}) {
                 }}>
                     Send to {inputField.name}
             </button>
+            
             <ul>
                 <li>
                     {storedMessages}

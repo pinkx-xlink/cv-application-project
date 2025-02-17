@@ -16,9 +16,11 @@ export default function InputFieldsList({inputFields, selectedId, dispatch}) {
                 {selectedId === inputField.id ? <b>{inputField.name}</b> : inputField.name }
                 {inputField.name}
               </button>
+              
             </li>
           ))}
         </ul>
+        
       </section>
     )
 }
