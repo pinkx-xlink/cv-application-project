@@ -1,4 +1,5 @@
 import { useState } from "react";
+import '../styles/Text.css'
 
 export default function Text({inputField, message, dispatch}) {
     return (
