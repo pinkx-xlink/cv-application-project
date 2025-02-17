@@ -1,6 +1,6 @@
 import { useReducer } from "react";
 
-export default function GeneralInfoReducer(tasks, action) {
+export default function InfoReducer(tasks, action) {
     switch (action.type) {
         
     }
