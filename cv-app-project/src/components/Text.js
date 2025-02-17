@@ -1,8 +1,13 @@
 import { useState } from "react";
 import '../styles/Text.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import { Button } from "react-bootstrap/Button";
+// import { ThemeProvider } from "react-bootstrap";
+//import { ButtonGroup } from "react-bootstrap/ButtonGroup";
 
 export default function Text({inputField, message, dispatch}) {
     return (
+        
         <section className="text">
             <textarea
                 value={message}
@@ -14,7 +19,7 @@ export default function Text({inputField, message, dispatch}) {
                     });
                 }}
             />
-            <button
+            <button 
                 onClick={() => {
                     alert('done');
                     dispatch({
@@ -24,5 +29,6 @@ export default function Text({inputField, message, dispatch}) {
                     Send to {inputField.name}
                 </button>
         </section>
+        
     )
 }

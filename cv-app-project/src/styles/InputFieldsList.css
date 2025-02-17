@@ -1,6 +1,7 @@
 .input-fields-list {
     display: flex;
     align-items: flex-start;
+    margin: 5px;
 }
 
 ul {
@@ -9,8 +10,17 @@ ul {
 
 li {
     list-style: none;
+    margin: 5px;
 }
 
 button {
     width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    background-color: #D9F99D;
+}
+button:focus,
+button:hover {
+    background-color: #93DC5C;
 }
