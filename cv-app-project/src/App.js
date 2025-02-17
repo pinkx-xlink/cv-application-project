@@ -128,7 +128,7 @@ function App() {
       
       </header>
 
-      <div>
+      <div className='buttons-and-input-container'>
         <InputFieldsList
           inputFields={inputFields}
           selectedId={state.selectedId}

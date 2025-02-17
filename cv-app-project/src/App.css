@@ -21,6 +21,15 @@
 .App-link {
   color: #61dafb;
 }
+
+.buttons-and-input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
 .general-info,
 .education-exp,
 .practical-exp {
