@@ -4,21 +4,21 @@ import Text from './components/Text';
 import InputList from './components/InputList';
 import infoReducer from './components/infoReducer';
 
-function reducer(state = "", action) {
-  switch (action.type) {
-    case "ON_CHANGE": {
-      const newValue = action.payload;
-      return {
-        ...state,
-        // newValue,
-        // selectedId: action.inputFieldId,
-      }; 
-    }
-    default: {
-      return state;
-    }
-  }
-}
+// function reducer(state = "", action) {
+//   switch (action.type) {
+//     case "ON_CHANGE": {
+//       const newValue = action.payload;
+//       return {
+//         ...state,
+//         // newValue,
+//         // selectedId: action.inputFieldId,
+//       }; 
+//     }
+//     default: {
+//       return state;
+//     }
+//   }
+// }
 
 
 const inputFields = [
@@ -39,7 +39,7 @@ const inputFields = [
 console.log(inputFields)
 function App() {
  // const [index, setIndex] = useState(0);
- const [state, dispatch] = useReducer(reducer, "");
+ // const [state, dispatch] = useReducer(reducer, "");
 
   const [editGeneralInfo, setEditGeneralInfo] = useState(false);
   const [editEducation, setEditEducation] = useState(false);
@@ -112,13 +112,15 @@ function App() {
       <header className="App-header">
         <h1>CV Creator Project</h1>
         <p>Enter your info and we'll take care of the rest!</p>
-        <input 
+        
+        {/* <input 
         value={state}
         onChange={event =>
           dispatch({ type: "ON_CHANGE", payload: event.target.value })
         }
         />
-        <div>{state}</div>
+        <div>{state}</div> */}
+      
       </header>
       {/* <Text
         key={inputField.id}
