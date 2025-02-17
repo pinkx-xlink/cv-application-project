@@ -3,19 +3,19 @@ import { useReducer } from "react";
 export const initialState = {
     selectedId: 0,
     messages: {
-      0: '0',
-      1: '1',
-      2: '2',
-      3: '3',
-      4: '4',
-      5: '5',
-      6: '6',
-      7: '7',
-      8: '8',
-      9: '9',
-      10: '10',
-      11: '11',
-      12: '12',
+      0: 'gen info',
+      1: 'edu',
+      2: 'edp',
+      3: 'first name',
+      4: 'last name',
+      5: 'email',
+      6: 'phone #',
+      7: 'school name',
+      8: 'field of study',
+      9: 'years of study',
+      10: 'company name',
+      11: 'position title',
+      12: 'responsibilities',
     },
   };
 export default function infoReducer(state, action) {
@@ -51,7 +51,7 @@ export default function infoReducer(state, action) {
         case 'SET_INPUT': {
             return{ 
                 ...state,
-                userInput: action.payload
+                userInput: action.payload,
             };
         }
         default: {
