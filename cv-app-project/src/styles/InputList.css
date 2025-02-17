@@ -1,0 +1,16 @@
+.input-fields-list {
+    display: flex;
+    align-items: flex-start;
+}
+
+ul {
+    
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    width: 200px;
+}

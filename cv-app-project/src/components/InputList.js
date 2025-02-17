@@ -1,3 +1,5 @@
+import "../styles/InputList.css"
+
 export default function InputList({inputFields, selectedId, dispatch}) {
     return (
         <section className='input-fields-list'>
