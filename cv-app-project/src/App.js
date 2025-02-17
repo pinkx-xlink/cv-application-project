@@ -117,7 +117,6 @@ function App() {
       <header className="App-header">
         <h1>CV Creator Project</h1>
         <p>Enter your info and we'll take care of the rest!</p>
-        
         {/* <input 
         value={state}
         onChange={event =>
@@ -142,7 +141,6 @@ function App() {
           dispatch={dispatch}
         />
       </div>
-
       {/* <Text
         key={inputField.id}
         message={message}

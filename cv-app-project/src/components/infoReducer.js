@@ -19,6 +19,8 @@ export const initialState = {
     },
   };
 export default function infoReducer(state, action) {
+    const storedMessages = [];
+
     switch (action.type) {
         case 'CHANGED_SELECTION': {
             return {
@@ -36,12 +38,14 @@ export default function infoReducer(state, action) {
             };
         }
         case 'SENT_MESSAGE': {
+            // storedMessages.push(state.messages)
             return {
                 ...state,
                 messages: {
                     ...state.messages,
                     [state.selectedId]: '',
                 },
+                
             };
         }
         default: {

@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 //import { ButtonGroup } from "react-bootstrap/ButtonGroup";
 
 export default function Text({inputField, message, dispatch}) {
+    const storedMessages = [];
     return (
         
         <section className="text">
@@ -13,6 +14,7 @@ export default function Text({inputField, message, dispatch}) {
                 value={message}
                 placeholder={'Textarea for ' + inputField.name}
                 onChange={(e) => {
+                   // storedMessages.push(e.target.value)
                     dispatch({
                         type: 'EDITED_MESSAGE',
                         message: e.target.value,
@@ -21,13 +23,19 @@ export default function Text({inputField, message, dispatch}) {
             />
             <button 
                 onClick={() => {
-                    alert('done');
+                    alert(message);
+                    // storedMessages.push(message)
                     dispatch({
                         type: 'SENT_MESSAGE',
                     })
                 }}>
                     Send to {inputField.name}
-                </button>
+            </button>
+            <ul>
+                <li>
+                    {storedMessages}
+                </li>
+            </ul>
         </section>
         
     )
