@@ -1,6 +1,8 @@
 import './App.css';
 import { useState, useReducer } from 'react';
 import Text from './components/Text';
+import InputList from './components/InputList';
+import infoReducer from './components/infoReducer';
 
 function reducer(state = "", action) {
   switch (action.type) {
