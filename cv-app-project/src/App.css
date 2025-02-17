@@ -1,6 +1,11 @@
+@font-face {
+  font-family: 'Quicksand';
+  src: url('./Quicksand/Quicksand-VariableFont_wght.ttf') format('truetype');
+}
+
 .App {
   text-align: center;
-  font-family: 'Roboto';
+  font-family: 'Quicksand';
 }
 
 .App-logo {
