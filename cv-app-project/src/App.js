@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useReducer } from 'react';
 
 function App() {
  // const [index, setIndex] = useState(0);
