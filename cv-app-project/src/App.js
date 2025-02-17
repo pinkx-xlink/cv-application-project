@@ -1,8 +1,22 @@
 import './App.css';
 import { useState, useReducer } from 'react';
 
+function reducer(state = "", action) {
+  switch (action.type) {
+    case "ON_CHANGE": {
+      const newValue = action.payload;
+      return newValue;
+    }
+    default: {
+      return state;
+    }
+  }
+}
+
 function App() {
  // const [index, setIndex] = useState(0);
+ const [state, dispatch] = useReducer(reducer, "");
+
   const [editGeneralInfo, setEditGeneralInfo] = useState(false);
   const [editEducation, setEditEducation] = useState(false);
   const [editExperience, setEditExperience] = useState(false);
@@ -74,6 +88,13 @@ function App() {
       <header className="App-header">
         <h1>CV Creator Project</h1>
         <p>Enter your info and we'll take care of the rest!</p>
+        <input 
+        value={state}
+        onChange={event =>
+          dispatch({ type: "ON_CHANGE", payload: event.target.value })
+        }
+        />
+        <div>{state}</div>
       </header>
 
       <div class="user-input">
