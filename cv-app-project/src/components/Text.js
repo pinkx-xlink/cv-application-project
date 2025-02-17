@@ -22,15 +22,17 @@ export default function Text({inputField, message, dispatch}) {
                 }}
             />
             <button 
-                onClick={() => {
+                onClick={(e) => {
                     alert(message);
                     // storedMessages.push(message)
                     dispatch({
                         type: 'SENT_MESSAGE',
                     })
                 }}>
+                    
                     Send to {inputField.name}
             </button>
+         
             
             <ul>
                 <li>

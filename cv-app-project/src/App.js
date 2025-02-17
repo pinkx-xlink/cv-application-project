@@ -22,7 +22,13 @@ const inputFields = [
 function App() {
   const [state, dispatch] = useReducer(infoReducer, initialState);
   const message = state.messages[state.selectedId];
-  const userInput = inputFields.find((i) => i.id === state.selectedId);
+  const inputFieldInfo = inputFields.find((i) => i.id === state.selectedId);
+  console.log(inputFieldInfo)
+  // const textAreaInput = state.message
+  // console.log(textAreaInput);
+  const handleTheChange = (e) => {
+    dispatch({ type: 'SET_INPUT', payload: e.target.value });
+  };
 
   const [editGeneralInfo, setEditGeneralInfo] = useState(false);
   const [editEducation, setEditEducation] = useState(false);
@@ -109,8 +115,13 @@ function App() {
           message={message}
           inputField={inputFields}
           dispatch={dispatch}
+          onChange={handleTheChange}
+          value={state.userInput}
+          type="text"
         />
+        <p>{state.value}</p>
       </div>
+      
      
       <div class="user-input">
           <div class="general-info"> 

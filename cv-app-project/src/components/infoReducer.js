@@ -48,6 +48,12 @@ export default function infoReducer(state, action) {
                 
             };
         }
+        case 'SET_INPUT': {
+            return{ 
+                ...state,
+                userInput: action.payload
+            };
+        }
         default: {
             throw Error('ERROR' + action.type)
         }
