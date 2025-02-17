@@ -5,13 +5,36 @@ function reducer(state = "", action) {
   switch (action.type) {
     case "ON_CHANGE": {
       const newValue = action.payload;
-      return newValue;
+      return {
+        ...state,
+        // newValue,
+        // selectedId: action.inputFieldId,
+      }; 
     }
     default: {
       return state;
     }
   }
 }
+
+const initialState = {
+  selectedId: 0,
+  messages: {
+    0: '0',
+    1: '1',
+    2: '2',
+    3: '3',
+    4: '4',
+    5: '5',
+    6: '6',
+    7: '7',
+    8: '8',
+    9: '9',
+    10: '10',
+    11: '11',
+    12: '12',
+  },
+};
 
 const inputFields = [
   {id: 0, name: 'General Info'},
@@ -25,8 +48,10 @@ const inputFields = [
   {id: 8, name: 'Field of Study'},
   {id: 9, name: 'Years of Study'},
   {id: 10, name: 'Company Name'},
+  {id: 11, name: 'Position Title'},
+  {id: 12, name: 'Responsibilities'},
 ];
-
+console.log(inputFields)
 function App() {
  // const [index, setIndex] = useState(0);
  const [state, dispatch] = useReducer(reducer, "");
@@ -111,6 +136,24 @@ function App() {
         <div>{state}</div>
       </header>
 
+      <section className='input-fields-list'>
+        <ul>
+          {inputFields.map((inputField) => (
+            <li key={inputField.id}>
+              <button
+                onClick={() => {
+                  dispatch({
+                    type: 'ON_CHANGE',
+                    inputFieldId: inputField.id,
+                  });
+                }}> 
+                {/* {selectedId === inputField.id ? <b>{inputField.name}</b> : inputField.name } */}
+                {inputField.name}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </section>
       <div class="user-input">
           <div class="general-info"> 
             <h3>General Info</h3>
