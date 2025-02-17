@@ -11,7 +11,7 @@ export default function InputList({inputFields, selectedId, dispatch}) {
                     inputFieldId: inputField.id,
                   });
                 }}> 
-                {/* {selectedId === inputField.id ? <b>{inputField.name}</b> : inputField.name } */}
+                {selectedId === inputField.id ? <b>{inputField.name}</b> : inputField.name }
                 {inputField.name}
               </button>
             </li>
