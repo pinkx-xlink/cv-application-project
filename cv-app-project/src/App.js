@@ -18,24 +18,6 @@ function reducer(state = "", action) {
   }
 }
 
-const initialState = {
-  selectedId: 0,
-  messages: {
-    0: '0',
-    1: '1',
-    2: '2',
-    3: '3',
-    4: '4',
-    5: '5',
-    6: '6',
-    7: '7',
-    8: '8',
-    9: '9',
-    10: '10',
-    11: '11',
-    12: '12',
-  },
-};
 
 const inputFields = [
   {id: 0, name: 'General Info'},
