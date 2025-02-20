@@ -8,13 +8,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function Text({inputField, message, dispatch}) {
     const storedMessages = [];
     return (
-        
         <section className="text">
             <textarea
                 value={message}
                 placeholder={'Textarea for ' + inputField.name}
                 onChange={(e) => {
-                   // storedMessages.push(e.target.value)
+                    
                     dispatch({
                         type: 'EDITED_MESSAGE',
                         message: e.target.value,
@@ -24,21 +23,17 @@ export default function Text({inputField, message, dispatch}) {
             <button 
                 onClick={(e) => {
                     alert(message);
-                    // storedMessages.push(message)
+                    storedMessages.push(message)
+                    console.log(`stored:: ${storedMessages}`)
+
+                    // addInfo(); function that appends message to document
                     dispatch({
                         type: 'SENT_MESSAGE',
                     })
                 }}>
-                    
                     Send to {inputField.name}
             </button>
-         
             
-            <ul>
-                <li>
-                    {storedMessages}
-                </li>
-            </ul>
         </section>
         
     )
