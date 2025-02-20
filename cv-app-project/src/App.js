@@ -103,7 +103,7 @@ function App() {
         <p>Enter your info and we'll take care of the rest!</p>
       </header>
 
-      <div className='buttons-and-input-container'>
+      {/* <div className='buttons-and-input-container'>
         <InputFieldsList
           inputFields={inputFields}
           selectedId={state.selectedId}
@@ -120,7 +120,7 @@ function App() {
           type="text"
         />
         <p>{state.value}</p>
-      </div>
+      </div> */}
       
      
       <div class="user-input">
