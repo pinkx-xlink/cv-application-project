@@ -67,8 +67,12 @@
   width: 100%;
 }
 #cv-form {
-  border: 1px solid white;
-  width: 600px;
+  
+  width: 90%;
   padding: 10px;
   margin: 10px;
+}
+
+.cv {
+  border: 1px solid black;
 }

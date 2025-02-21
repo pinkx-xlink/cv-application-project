@@ -181,24 +181,32 @@ function App() {
           </div>
         </div>
 
-        <div 
-        id="cv-form">
+        <div id="cv-form">
+        
           <button> Edit CV </button>
-          <div className="cv">
-            <h2>{fullName}</h2>
-            <span>{phoneNumber} {email} </span>
-          </div>
-          
 
-          <h3>Educational Experience</h3>
-          <p><b>{schoolName}</b></p>
-          <p>{fieldOfStudy}</p>
-          <p>{yearsOfStudy}</p>
-          <h3>Practical Experience</h3>
-          <p>{companyName}</p>
-          <p>{positionTitle}</p>
-          <p>Responsibilities:</p>
-          <li>{responsibilities}</li>
+          <div className="cv">
+            <div className='personal-info-container'>
+              <h2>{fullName}</h2>
+              <span>{phoneNumber} {email} </span>
+            </div>
+
+            <div className='education-container'>
+              <h3>Educational Experience</h3>
+              <p><b>{schoolName}</b></p>
+              <p>{fieldOfStudy}</p>
+              <p>{yearsOfStudy}</p>
+            </div>
+            
+            <div className='experience-container'>
+              <h3>Practical Experience</h3>
+              <p>{companyName}</p>
+              <p>{positionTitle}</p>
+              <p>Responsibilities:</p>
+              <li>{responsibilities}</li>
+            </div>
+            
+          </div>
         </div>
     </div>
   );
