@@ -12,16 +12,17 @@ function App() {
   const [editEducation, setEditEducation] = useState(false);
   const [editExperience, setEditExperience] = useState(false);
 
-  const [firstName, setFirstName] = useState('');
+  const [firstName, setFirstName] = useState('Your Name');
   const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [schoolName, setSchoolName] = useState('');
-  const [fieldOfStudy, setFieldOfStudy] = useState('');
-  const [yearsOfStudy, setYearsOfStudy] = useState('');
-  const [companyName, setCompanyName] = useState('');
-  const [positionTitle, setPositionTitle] = useState('');
-  const [responsibilities, setResponsibilities] = useState('');
+  const [email, setEmail] = useState('example123@gmail.com');
+  const [phoneNumber, setPhoneNumber] = useState('(123) 456-7891');
+  const [schoolName, setSchoolName] = useState('School Name');
+  const [fieldOfStudy, setFieldOfStudy] = useState('Field of Study');
+  const [yearsOfStudy, setYearsOfStudy] = useState('20XX-20XX');
+  // Add 'I work/study here currently' option
+  const [companyName, setCompanyName] = useState('Company Name');
+  const [positionTitle, setPositionTitle] = useState('Position Title');
+  const [responsibilities, setResponsibilities] = useState('Responsibilities');
 
   const fullName = firstName + ' ' + lastName;
   const userInput = document.querySelector('.user-input');
