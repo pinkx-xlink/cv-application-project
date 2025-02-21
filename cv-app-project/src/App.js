@@ -8,6 +8,11 @@ import infoReducer, { initialState } from './components/infoReducer';
 
 function App() {
   const cv = document.querySelector('.cv');
+  const [darkMode, setDarkMode] = useState(false);
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  }
+
   const [editGeneralInfo, setEditGeneralInfo] = useState(false);
   const [editEducation, setEditEducation] = useState(false);
   const [editExperience, setEditExperience] = useState(false);
@@ -182,9 +187,14 @@ function App() {
           </div>
         </div>
 
-        <div id="cv-form">
+        <button onClick={toggleDarkMode}>
+            Toggle to {darkMode ? 'Light' : 'Dark'} Theme
+          </button>
+        <div 
+        id="cv-form"
+        className={darkMode ? 'dark-mode' : 'light-mode'}>
         
-          <button> Edit CV </button>
+         
 
           <div className="cv">
             <div className='personal-info-container'>
@@ -203,10 +213,8 @@ function App() {
               <h3>Practical Experience</h3>
               <p>{companyName}</p>
               <p>{positionTitle}</p>
-              <p>Responsibilities:</p>
               <li>{responsibilities}</li>
             </div>
-            
           </div>
         </div>
     </div>
