@@ -1,7 +1,29 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-export default function Documentt() {
-    return (
-        <h1>documenttttt</h1>
-    )
+export default class Documentt extends Component {
+    state = {
+        isActive:false
+    }
+
+    handleShow = () => {
+        this.setState({
+            isActive:true
+        })
+    }
+
+    handleHide = () => {
+        this.setState({
+            isActive:false
+        })
+    }
+    render(){
+        return (
+            <div>
+                {this.state.isActive ? <h1>DOCUMENTT</h1> : null}
+                <button onClick={this.handleShow}>Show</button>
+                <button onClick={this.handleHide}>Hide</button>
+            </div>
+        )
+    }
+    
 }

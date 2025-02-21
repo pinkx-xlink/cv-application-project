@@ -130,7 +130,7 @@ function App() {
         />
         <p>{state.value}</p>
       </div> */}
-      
+      <Documentt />
      
       <div class="user-input">
           <div class="general-info"> 
