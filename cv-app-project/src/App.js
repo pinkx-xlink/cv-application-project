@@ -5,35 +5,9 @@ import InputFieldsList from './components/InputFieldsList';
 import infoReducer, { initialState } from './components/infoReducer';
 import Documentt from './components/Document';
 
-const inputFields = [
-  {id: 0, name: 'General Info'},
-  {id: 1, name: 'Education'},
-  {id: 2, name: 'Experience'},
-  {id: 3, name: 'First Name'},
-  {id: 4, name: 'Last Name'},
-  {id: 5, name: 'Email'},
-  {id: 6, name: 'Phone Number'},
-  {id: 7, name: 'School Name'},
-  {id: 8, name: 'Field of Study'},
-  {id: 9, name: 'Years of Study'},
-  {id: 10, name: 'Company Name'},
-  {id: 11, name: 'Position Title'},
-  {id: 12, name: 'Responsibilities'},
-];
-function App() {
-  const [state, dispatch] = useReducer(infoReducer, initialState);
-  const message = state.messages[state.selectedId];
-  const inputFieldInfo = inputFields.find((i) => i.id === state.selectedId);
-  console.log(inputFieldInfo)
-  // const textAreaInput = state.message
-  // console.log(textAreaInput);
-  const handleTheChange = (e) => {
-    dispatch({ type: 'SET_INPUT', payload: e.target.value });
-  };
 
+function App() {
   const cv = document.querySelector('.cv');
-  
-  const [show, setShow] = useState(false);
   const [editGeneralInfo, setEditGeneralInfo] = useState(false);
   const [editEducation, setEditEducation] = useState(false);
   const [editExperience, setEditExperience] = useState(false);
@@ -51,10 +25,6 @@ function App() {
 
   const fullName = firstName + ' ' + lastName;
   const userInput = document.querySelector('.user-input');
-
-  function handleSetShow() {
-    setShow(!show);
-  }
   
   function handleEditGeneralInfoClick() {
     setEditGeneralInfo(!editGeneralInfo);
@@ -111,25 +81,7 @@ function App() {
         <h1>CV Creator Project</h1>
         <p>Enter your info and we'll take care of the rest!</p>
       </header>
-
-      {/* <div className='buttons-and-input-container'>
-        <InputFieldsList
-          inputFields={inputFields}
-          selectedId={state.selectedId}
-          dispatch={dispatch}
-          className="input-fields-list"
-        />
-        <Text
-          key={inputFields.id}
-          message={message}
-          inputField={inputFields}
-          dispatch={dispatch}
-          onChange={handleTheChange}
-          value={state.userInput}
-          type="text"
-        />
-        <p>{state.value}</p>
-      </div> */}
+       
       <Documentt />
      
       <div class="user-input">
