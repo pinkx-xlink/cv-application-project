@@ -3,7 +3,7 @@ import { useState, useReducer } from 'react';
 import Text from './components/Text';
 import InputFieldsList from './components/InputFieldsList';
 import infoReducer, { initialState } from './components/infoReducer';
-import Documentt from './components/Document';
+
 
 
 function App() {
@@ -81,9 +81,6 @@ function App() {
         <h1>CV Creator Project</h1>
         <p>Enter your info and we'll take care of the rest!</p>
       </header>
-       
-      <Documentt />
-     
       <div class="user-input">
           <div class="general-info"> 
             <h3>General Info</h3>
