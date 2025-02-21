@@ -3,6 +3,7 @@ import { useState, useReducer } from 'react';
 import Text from './components/Text';
 import InputFieldsList from './components/InputFieldsList';
 import infoReducer, { initialState } from './components/infoReducer';
+import Documentt from './components/Document';
 
 const inputFields = [
   {id: 0, name: 'General Info'},
@@ -30,6 +31,9 @@ function App() {
     dispatch({ type: 'SET_INPUT', payload: e.target.value });
   };
 
+  const cv = document.querySelector('.cv');
+  
+  const [show, setShow] = useState(false);
   const [editGeneralInfo, setEditGeneralInfo] = useState(false);
   const [editEducation, setEditEducation] = useState(false);
   const [editExperience, setEditExperience] = useState(false);
@@ -46,7 +50,12 @@ function App() {
   const [responsibilities, setResponsibilities] = useState('');
 
   const fullName = firstName + ' ' + lastName;
+  const userInput = document.querySelector('.user-input');
 
+  function handleSetShow() {
+    setShow(!show);
+  }
+  
   function handleEditGeneralInfoClick() {
     setEditGeneralInfo(!editGeneralInfo);
   }
@@ -127,7 +136,10 @@ function App() {
           <div class="general-info"> 
             <h3>General Info</h3>
             {/* expand or collapse the "General Info" section on button click using a useState */}
-            <button onClick={handleEditGeneralInfoClick}> {editGeneralInfo ? 'Submit' : 'Edit'} </button>
+            <button 
+            onClick={handleEditGeneralInfoClick}> 
+            {editGeneralInfo ? 'Submit' : 'Edit'}  </button>
+           
             {editGeneralInfo && 
             <>
               <label>
@@ -139,7 +151,7 @@ function App() {
             </label>
             <label>
               Last name: {' '}
-              <input 
+              <input
                 value={lastName}
                 onChange={handleLastNameChange}
               />
@@ -220,9 +232,14 @@ function App() {
           </div>
         </div>
 
-        <div id="cv-form">
-          <h2>{fullName}</h2>
-          <span>{phoneNumber} {email} </span>
+        <div 
+        id="cv-form">
+          <button> Edit CV </button>
+          <div className="cv">
+            <h2>{fullName}</h2>
+            <span>{phoneNumber} {email} </span>
+          </div>
+          
 
           <h3>Educational Experience</h3>
           <p><b>{schoolName}</b></p>
