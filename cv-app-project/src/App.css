@@ -31,7 +31,7 @@
 .buttons-and-input-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding: 25px;
 }
@@ -39,18 +39,19 @@
 .general-info,
 .education-exp,
 .practical-exp {
-  width: 350px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   border: 1px solid white;
-  align-items: self-end;
   padding: 15px;
+  align-items: center;
 } 
+
 .user-input {
   display: flex;
   flex-direction: row;
   justify-items: center;
-
+  width: 100%;
 }
 #cv-form {
   border: 1px solid white;
