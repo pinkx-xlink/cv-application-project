@@ -97,8 +97,8 @@ export default function Info() {
     setResponsibilities(e.target.value);
   }
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="info-container">
+      <header className="header">
         <h1>CV Creator Project</h1>
         <p>Enter your info and we'll take care of the rest!</p>
       </header>
