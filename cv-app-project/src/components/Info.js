@@ -103,13 +103,15 @@ export default function Info() {
         <p>Enter your info and we'll take care of the rest!</p>
       </header>
 
+      {/* THIS IS THE OLD INPUT FIELDS LIST */}
+      {/*
       <div className="buttons-and-input-container">
         <InputFieldsList
           inputFields={inputFields}
           selectedId={state.selectedId}
           dispatch={dispatch}
           className="input-fields-list"
-        />
+        /> 
 
         <Text
           key={inputFields.id}
@@ -122,6 +124,7 @@ export default function Info() {
         />
         <p>{state.value}</p>
       </div>
+      */}
 
       <div class="user-input">
         <div class="general-info">
