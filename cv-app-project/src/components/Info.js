@@ -110,6 +110,7 @@ export default function Info() {
           dispatch={dispatch}
           className="input-fields-list"
         />
+
         <Text
           key={inputFields.id}
           message={message}
@@ -212,6 +213,7 @@ export default function Info() {
         </div>
       </div>
 
+      {/* THE CV RETURNED USING THE FORM DATA */}
       <div id="cv-form">
         <h2>{fullName}</h2>
         <span>
