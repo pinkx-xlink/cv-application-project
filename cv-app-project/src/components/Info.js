@@ -1,4 +1,4 @@
-import { useState, useReducer } from "react";
+import React, { useState, useReducer } from "react";
 import Text from "./Text";
 import InputFieldsList from "./InputFieldsList";
 import infoReducer, { initialState } from "./infoReducer";
